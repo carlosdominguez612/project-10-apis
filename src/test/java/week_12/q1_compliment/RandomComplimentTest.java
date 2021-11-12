@@ -100,8 +100,6 @@ public class RandomComplimentTest {
         Object randomComplimentObject = null;
         try {
             Constructor c = constructors[0];
-            System.out.println(constructors);
-            System.out.println(c + " " + Arrays.toString(c.getParameterTypes()));
             randomComplimentObject = constructors[0].newInstance(null);
 
             // Use getDeclaredConstructors to get the default constructor java makes if the class does not
@@ -118,7 +116,7 @@ public class RandomComplimentTest {
 
         // either one text field or setName field
         Field[] fields = complimentResponseClass.getFields();
-        System.out.println(Arrays.toString(fields));
+
         if (fields.length == 1) {
             Field textField = fields[0];
             // check the type, name in another test
