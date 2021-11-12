@@ -1,5 +1,6 @@
 package week_12.q1_compliment;
 
+
 public class RandomCompliment {
 
 
@@ -13,7 +14,9 @@ public class RandomCompliment {
     public static String getRandomCompliment() {
 
         /*
-        * TODO use Unirest to make a request to the Random Compliment API, using the URL provided below.
+        * TODO use Unirest to make a request to the Random Compliment API, using the URL
+        *
+        * https://random-compliment.herokuapp.com/random
         *
         * Tip: Paste the URL into your browser address bar to visualize the structure
         * of the response.  You'll see a different compliment every time. An example
@@ -27,6 +30,9 @@ public class RandomCompliment {
          *  The Java class should be called Compliment.
          *  The Compliment class should NOT be a nested class.
         *    Define this class outside of the RandomCompliment class in this file, or in a separate file.
+        *    If you create a new class file, make sure you add it to your Git repository
+        *    so it is committed and uploaded to your lab repository.
+        *
         *  The Compliment class should have a public field, or public get and set methods to save the text property.
         *
         * Remember that field(s) in classes used to store API responses,
@@ -43,9 +49,6 @@ public class RandomCompliment {
         * for errors, and please email me if you need any help troubleshooting.
         * */
 
-
-        // TODO use this URL in your request
-        String randomComplimentApiUrl = "https://random-compliment.herokuapp.com/random";
 
         return null; // TODO delete and replace with your code
 
