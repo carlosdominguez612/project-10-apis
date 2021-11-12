@@ -36,6 +36,11 @@ public class RandomCompliment {
         *
         * TODO Extract and return the text - the compliment text.
         *
+        * If you see errors when making the API call, please try the API URL
+        * https://random-compliment.herokuapp.com/random
+        * in your browser. If you see an error message, please let me know ASAP. Thank you!
+        * If the API seems to be working - you see a random compliment - then check your code
+        * for errors, and please email me if you need any help troubleshooting.
         * */
 
 

@@ -23,7 +23,7 @@ Your program will connect to the GitHub API and request information about a GitH
 Their name
 Their login name
 Their location
-The names and languages of their repositories. 
+The name, language, and size of each of their repositories. 
 
 The API URLs you will use are in this format.  
 
