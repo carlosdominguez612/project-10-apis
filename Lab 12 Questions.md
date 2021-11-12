@@ -1,13 +1,27 @@
 ## Lab 12: Java APIs
 
+**Dependencies**  
 The necessary dependencies have already been added to this project for you, so you will not need to modify pom.xml.
 
+**Code needs to meet the requirements given in the instructions**  
 The tests for this lab can't check everything about your code since it uses API calls and external APIs. 
 It is possible to pass the tests but not meet the assignment expectations. Follow the instructions given carefully. 
 Your code will be human-reviewed. Email me if you would like me to check your work.
 
+**Accounts, access keys?**   
 The APIs in this lab are open access. 
 None of the APIs used here require accounts or authentication. 
+
+**Error handling**   
+In a real program, we would need to add error-handling code that anticipates possible errors when making API requests.
+For this lab, we will assume that the user enters valid data, 
+that the computer running the code has an internet connection, 
+the API is working, and that the API server accepts the request 
+and provides a response in the expected format.
+
+Obviously there are several possibly ways that things can go wrong - as you work with APIs in future programs, 
+you'll think about how to handle these errors. For this lab, assume that the requests will work. 
+
 
 ### Random Compliment API
 
