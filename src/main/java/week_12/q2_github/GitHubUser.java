@@ -1,4 +1,4 @@
-package week_12.Q2_github;
+package week_12.q2_github;
 
 
 public class GitHubUser {

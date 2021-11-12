@@ -1,4 +1,4 @@
-package week_12.Q2_github;
+package week_12.q2_github;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -8,16 +8,17 @@ import java.lang.reflect.Field;
 
 import static org.junit.Assert.*;
 
-public class GitHubRepositoryListTest {
+public class GitHubUserInformationTest {
 
     static Class userClass;
     static Field loginField;
     static Field locationField;
-    static Field nameField;
+    static Field userNameField;
 
     static Class repoClass;
     static Field languageField;
     static Field repoNameField;
+    static Field repoSizeField;
 
     private final int TIMEOUT = 20000;  // 20 seconds, big timeout since API will be slow to wake up if not used for an hour.
 
@@ -28,12 +29,12 @@ public class GitHubRepositoryListTest {
          userClass = GitHubUser.class;
          loginField = userClass.getField("login");
          locationField = userClass.getField("location");
-         nameField = userClass.getField("name");
+         userNameField = userClass.getField("name");
 
          repoClass = GitHubRepository.class;
          languageField = repoClass.getField("language");
          repoNameField = repoClass.getField("name");
-
+         repoSizeField = repoClass.getField("size");
     }
 
 
@@ -48,7 +49,7 @@ public class GitHubRepositoryListTest {
         String location = (String) locationField.get(user);
         assertEquals("Minneapolis, MN", location);
 
-        String name = (String) nameField.get(user);
+        String name = (String) userNameField.get(user);
         assertEquals("Clara", name);
 
 
@@ -60,7 +61,7 @@ public class GitHubRepositoryListTest {
         location = (String) locationField.get(user);
         assertEquals("Canada", location);
 
-        name = (String) nameField.get(user);
+        name = (String) userNameField.get(user);
         assertEquals("Hello! Java! Class!!", name);
 
     }
@@ -83,12 +84,16 @@ public class GitHubRepositoryListTest {
         assertEquals("owls", repoName);
         String repoLang = (String) languageField.get(owlRepo);
         assertEquals("Python", repoLang);
+        int repoSize = repoSizeField.getInt(owlRepo);
+        assertEquals(1, repoSize);
 
         GitHubRepository spellsRepo = repositories[1];
         repoName = (String) repoNameField.get(spellsRepo);
         assertEquals("spells", repoName);
         repoLang = (String) languageField.get(spellsRepo);
         assertEquals("C#", repoLang);
+        repoSize = repoSizeField.getInt(spellsRepo);
+        assertEquals(16, repoSize);
 
     }
 
@@ -101,15 +106,17 @@ public class GitHubRepositoryListTest {
         loginField.set(exampleUser, "Hermione Granger");
         locationField.set(exampleUser, "London, England");
 
-        // And some example repositories, need a name and language
+        // And some example repositories, need a name and language and size
 
         GitHubRepository repo1 = new GitHubRepository();
         languageField.set(repo1, "JavaScript");
         repoNameField.set(repo1, "Spells");
+        repoSizeField.set(repo1, 404);
 
         GitHubRepository repo2 = new GitHubRepository();
         languageField.set(repo2, "C#");
         repoNameField.set(repo2, "Owls");
+        repoSizeField.set(repo2, 12345678);
 
         GitHubRepository[] repos = { repo1, repo2 };
 
@@ -119,8 +126,11 @@ public class GitHubRepositoryListTest {
 
         assertTrue("Print the user's name", textPrinted.contains("Hermione Granger"));
         assertTrue("Print the user's location", textPrinted.contains("London, England"));
+        assertTrue("Print the size of each repository. Include the units, KB", textPrinted.contains("404 KB"));
+
         assertTrue("Print the name of each repository", textPrinted.contains("Spells"));
         assertTrue("Print the name of each repository", textPrinted.contains("Owls"));
+        assertTrue("Print the size of each repository. Include the units, KB", textPrinted.contains("12345678 KB"));
 
     }
 

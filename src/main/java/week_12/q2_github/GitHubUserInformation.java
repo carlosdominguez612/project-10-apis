@@ -1,6 +1,5 @@
-package week_12.Q2_github;
+package week_12.q2_github;
 
-import java.util.List;
 
 import static input.InputUtils.stringInput;
 
@@ -8,8 +7,11 @@ public class GitHubUserInformation {
 
     public static void main(String[] args) {
 
+        // You don't need to modify this method.
         String username = stringInput("Enter a GitHub user's name: ");
         GitHubUser user = getUserInformation(username);
+        GitHubRepository[] repositories = getRepositories(user);
+        displayGitHubUserInformation(user, repositories);
 
     }
 
@@ -78,6 +80,7 @@ public class GitHubUserInformation {
          *  GitHubRepository should have public fields for
          *  The repository name
          *  The repository language
+         *  The repository size.
          *
          * Ensure the names and types of these fields match the data returned in an API response.
          *
@@ -103,6 +106,8 @@ public class GitHubUserInformation {
         // TODO for each repository,
         //  display the repository's name
         //  the repository's language
+        //  the repository's size. Include the units, KB, with the number.
+        //      So, if a repository's size is 100, display "100 KB" with a space between the number and "KB".
 
     }
 }

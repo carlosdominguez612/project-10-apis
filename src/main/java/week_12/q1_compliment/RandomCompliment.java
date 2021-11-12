@@ -1,4 +1,4 @@
-package week_12.Q1_compliment;
+package week_12.q1_compliment;
 
 public class RandomCompliment {
 

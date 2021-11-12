@@ -1,6 +1,5 @@
-package week_12.Q1_compliment;
+package week_12.q1_compliment;
 
-import kong.unirest.HttpRequest;
 import kong.unirest.ObjectMapper;
 import kong.unirest.Unirest;
 import org.junit.After;
@@ -67,7 +66,7 @@ public class RandomComplimentTest {
 
         // TODO separate file?
         try {
-            Class complimentClass = Class.forName("week_12.Q1_compliment.Compliment");
+            Class complimentClass = Class.forName("week_12.q1_compliment.Compliment");
             System.out.println("Found Compliment class, standalone");
             return complimentClass;
         } catch(Exception e) {
@@ -75,7 +74,7 @@ public class RandomComplimentTest {
             // not found, check for nested class but tell student to move to standalone
             try {
                 // TODO nested classes not allowed. Can't create as easily with reflection.
-                Class complimentResponse = Class.forName("week_12.Q1_compliment.RandomCompliment$Compliment");
+                Class complimentResponse = Class.forName("week_12.q1_compliment.RandomCompliment$Compliment");
                 System.err.println("Found Compliment class, defined as a nested class. " +
                         "\nMove the class definition outside of the RandomCompliment class.");
                 return null;

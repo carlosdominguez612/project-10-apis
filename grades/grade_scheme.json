@@ -3,13 +3,13 @@
     {
       "question" : 1,
       "java_file": "RandomCompliment",
-      "test_files": ["week_12.RandomComplimentTest"],
+      "test_files": ["week_12.q1_compliment.RandomComplimentTest"],
       "points": 8
     },
     {
       "question" : 2,
-      "java_file": "GitHubUserInfo",
-      "test_files": ["week_12.GitHubUserInfoTest"],
+      "java_file": "GitHubUserInformation",
+      "test_files": ["week_12.q2_github.GitHubUserInformationTest"],
       "points": 12
     }
   ]
