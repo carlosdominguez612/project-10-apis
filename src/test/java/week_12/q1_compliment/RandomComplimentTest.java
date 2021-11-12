@@ -12,7 +12,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-
 import static org.mockito.Mockito.*;
 import static org.junit.Assert.*;
 
@@ -37,7 +36,7 @@ public class RandomComplimentTest {
     @Test(timeout = TIMEOUT)
     public void getRandomComplimentUsesCorrectAPIURL() {
 
-        // Mock Unirest's .get
+        // Mock Unirest's .get method and ensure it uses the correct URL.
         // Ensure it's called with the correct API string
         try( MockedStatic<Unirest> mockUnirest = mockStatic(Unirest.class) ) {
 
@@ -55,7 +54,7 @@ public class RandomComplimentTest {
 
         } catch (Exception e) {
             System.err.println(e);
-            // expecting a null pointer here because the mock methods return null when called
+            // Unirest get not used in the expected way, or some other error.
             fail("Use Unirest to get the random compliment.");
         }
     }
@@ -64,16 +63,15 @@ public class RandomComplimentTest {
 
     private Class findComplimentResponseClass() {
 
-        // TODO separate file?
         try {
             Class complimentClass = Class.forName("week_12.q1_compliment.Compliment");
-            System.out.println("Found Compliment class, standalone");
+            System.out.println("Found Compliment class, standalone class as expected.");
             return complimentClass;
         } catch(Exception e) {
 
             // not found, check for nested class but tell student to move to standalone
             try {
-                // TODO nested classes not allowed. Can't create as easily with reflection.
+                // nested classes not allowed. Can't create as easily with reflection.
                 Class complimentResponse = Class.forName("week_12.q1_compliment.RandomCompliment$Compliment");
                 System.err.println("Found Compliment class, defined as a nested class. " +
                         "\nMove the class definition outside of the RandomCompliment class.");
@@ -89,8 +87,8 @@ public class RandomComplimentTest {
     @Test(timeout = TIMEOUT)
     public void testGetRandomCompliment() throws Exception {
 
-        // Mock Unirest's .getBody and return pre-generated Compliment
-        // ensure getRandomCompliment returns the String from the class
+        System.out.println("This test makes an API call. " +
+                "\nSince the API is slow to respond when it hasn't been used for an hour, this test may take 10 seconds to complete.");
 
         String exampleCompliment = "You are an outstandingly great Java programmer!";
 
@@ -99,18 +97,19 @@ public class RandomComplimentTest {
 
         Constructor[] constructors = complimentResponseClass.getDeclaredConstructors();
 
-
-        Object crc = null;
+        Object randomComplimentObject = null;
         try {
             Constructor c = constructors[0];
             System.out.println(constructors);
             System.out.println(c + " " + Arrays.toString(c.getParameterTypes()));
-            crc = constructors[0].newInstance(null);
+            randomComplimentObject = constructors[0].newInstance(null);
 
-            Constructor dc = complimentResponseClass.getDeclaredConstructor();
+            // Use getDeclaredConstructors to get the default constructor java makes if the class does not
+            // have a constructor.
+            Constructor defaultNoArgConstructor = complimentResponseClass.getDeclaredConstructor();
 
-            // TODO this does not work when the class is nested. instructions should specify standalone class
-            crc = dc.newInstance();
+            // TODO this does not work when the class is nested. instructions specify standalone class
+            randomComplimentObject = defaultNoArgConstructor.newInstance();
 
         } catch (Exception e) {
             System.err.println(e);
@@ -123,24 +122,27 @@ public class RandomComplimentTest {
         if (fields.length == 1) {
             Field textField = fields[0];
             // check the type, name in another test
-            textField.set(crc, exampleCompliment);
+            textField.set(randomComplimentObject, exampleCompliment);
         }
 
         else {
             // there must be setText method
             Method setText = complimentResponseClass.getMethod("setText", String.class);
-            setText.invoke(crc, exampleCompliment);
+            setText.invoke(randomComplimentObject, exampleCompliment);
         }
 
-        // So we should have an object with a pre-packaged string
+        // So we should have an object with the pre-packaged string defined above,
+        // regardless of what the API actually returns
 
-        // Replace default object mapper with one that always returns the mock object with mock data
-        Unirest.config().setObjectMapper(new MockObjectMapper(crc));
+        // Replace default object mapper with one that always returns the mock randomComplimentObject
+        // object with mock data
+        Unirest.config().setObjectMapper(new MockObjectMapper(randomComplimentObject));
 
         String compliment = RandomCompliment.getRandomCompliment();
 
         assertEquals("Return the text from the API response.", exampleCompliment, compliment);
     }
+
 
     class MockObjectMapper implements ObjectMapper {
 
@@ -165,13 +167,12 @@ public class RandomComplimentTest {
 
         // Ensure correct Compliment class is created
         // It can work as a nested class of RandomCompliment or a standalone but lab
-        // requires standalone class.
-        //
+        // requires standalone class.  Standalone classes are usually recommended anyway.
 
         // Ensure it has one field, a String text
         // or get and set text methods
         String msg = "Can't find Compliment class. Use this exact name for the class. " +
-                "\nDefine this class in the same file as RandomCompliment (but not as a nested class) or a new file in the Q1_compliment directory.";
+                "\nDefine this class in the same file as RandomCompliment (but not as a nested class) or a new file in the q1_compliment package (directory).";
 
         Class complimentResponseClass = findComplimentResponseClass();
         assertNotNull(msg, complimentResponseClass);
@@ -192,7 +193,7 @@ public class RandomComplimentTest {
             try {
                 Method getText = complimentResponseClass.getMethod("getText");
                 Method setText = complimentResponseClass.getMethod("setText", String.class);
-                assertEquals(String.class, getText.getReturnType());
+                assertEquals("If you use getter and setter methods, the return type from getText should be String.", String.class, getText.getReturnType());
             } catch (Exception e) {
                 System.err.println(e);
                 fail("Create a public text field; or a private text field with getter and setter methods");
@@ -204,21 +205,16 @@ public class RandomComplimentTest {
             fail("The Compliment class should only have the field(s) and/or methods needed to map to the JSON response.\n" +
                     "Don't add any other fields or methods");
         }
-
-
     }
 
 
     @Test(timeout = TIMEOUT)
     public void humanReview() {
 
-       fail("This test will always fail.\n" +
-               "The tests for this lab can't check everything about your code since it uses API calls and external APIs. \n" +
-               "It is possible to pass the tests but not meet the assignment expectations. \n" +
-               "Carefully follow the instructions given. \n" +
-               "Your code will be human-reviewed. Please email me if you would like me to check your work.");
+        fail("This test will always fail.\n" +
+                "The tests for this lab can't check everything about your code since it uses API calls and external APIs. \n" +
+                "It is possible to write code that passes the tests, but does not meet the assignment expectations. \n" +
+                "Carefully follow the instructions given. \n" +
+                "Your code will be human-reviewed. Please email me if you would like me to check your work.");
     }
-
-
-
 }

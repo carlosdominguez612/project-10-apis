@@ -24,99 +24,149 @@ public class GitHubUserInformationTest {
 
 
     @BeforeClass
-    public static void gitHubRepositoryList() throws Exception {
+    public static void gitHubRepositoryList() {
 
-         userClass = GitHubUser.class;
-         loginField = userClass.getField("login");
-         locationField = userClass.getField("location");
-         userNameField = userClass.getField("name");
+        try {
+             userClass = GitHubUser.class;
+             loginField = userClass.getField("login");
+             locationField = userClass.getField("location");
+             userNameField = userClass.getField("name");
 
-         repoClass = GitHubRepository.class;
-         languageField = repoClass.getField("language");
-         repoNameField = repoClass.getField("name");
-         repoSizeField = repoClass.getField("size");
+             repoClass = GitHubRepository.class;
+             languageField = repoClass.getField("language");
+             repoNameField = repoClass.getField("name");
+             repoSizeField = repoClass.getField("size");
+        } catch (Exception e) {
+            System.err.println(e);
+            fail("""
+        This part of the test looks at the GitHubUser and GitHubRepository classes and checks that they have the expected fields. 
+        If an error occurs here, make sure your fields are public.
+        And, make sure the field names in your classes match the property names in the JSON response. """);
+        }
     }
 
 
     @Test(timeout = TIMEOUT)
-    public void getUserLocation() throws Exception {
+    public void getUserNameAndLocation() {
 
-        GitHubUser user = GitHubUserInformation.getUserInformation("claraj");
+        try {
 
-        String loginName = (String) loginField.get(user);
-        assertEquals("claraj", loginName);
+            GitHubUser user = GitHubUserInformation.getUserInformation("claraj");
 
-        String location = (String) locationField.get(user);
-        assertEquals("Minneapolis, MN", location);
+            assertNotNull("Finish the getUserInformation method to make the API call, " +
+                    "\n and create and return a GitHubUser object containing information from the API response", user);
 
-        String name = (String) userNameField.get(user);
-        assertEquals("Clara", name);
+            String msgTemplate = "The %s value from the GitHub API response should be stored in the %s field in the GitHubUer object.";
+            String loginName = (String) loginField.get(user);
+            assertEquals(String.format(msgTemplate, "login", "login"), "claraj", loginName);
+
+            String location = (String) locationField.get(user);
+            assertEquals(String.format(msgTemplate, "location", "location"), "Minneapolis, MN", location);
+
+            String name = (String) userNameField.get(user);
+            assertEquals(String.format(msgTemplate, "name", "name"), "Clara", name);
 
 
-        user = GitHubUserInformation.getUserInformation("hello-java-class");
+            user = GitHubUserInformation.getUserInformation("hello-java-class");
 
-        loginName = (String) loginField.get(user);
-        assertEquals("hello-java-class", loginName);
+            assertNotNull("Finish the getUserInformation method to make the API call, " +
+                    "\n and create and return a GitHubUser object containing information from the API resppnse", user);
 
-        location = (String) locationField.get(user);
-        assertEquals("Canada", location);
+            loginName = (String) loginField.get(user);
+            assertEquals(String.format(msgTemplate, "login", "login"), "hello-java-class", loginName);
 
-        name = (String) userNameField.get(user);
-        assertEquals("Hello! Java! Class!!", name);
+            location = (String) locationField.get(user);
+            assertEquals(String.format(msgTemplate, "location", "location"), "Canada", location);
 
+            name = (String) userNameField.get(user);
+            assertEquals(String.format(msgTemplate, "name", "name"), "Hello! Java! Class!!", name);
+
+        } catch (Exception e) {
+            System.err.println(e);
+            fail("""
+                This part of the test looks at the GitHubUser class and checks that it has the expected fields, and the 
+                values of those fields are the expected values, with data from the API response. 
+                If an error occurs here, make sure your fields are public.
+                And, make sure the field names in your classes match the property names in the JSON response.
+                And, make sure the fields have the expected types. """);
+        }
     }
 
 
     @Test(timeout = TIMEOUT)
-    public void getRepositories() throws Exception {
+    public void getRepositories()  {
 
-        GitHubUser user = new GitHubUser();
-        loginField.set(user, "hello-java-class");
+        try {
+            GitHubUser user = new GitHubUser();
+            loginField.set(user, "hello-java-class");
 
-        GitHubRepository[] repositories = GitHubUserInformation.getRepositories(user);
+            GitHubRepository[] repositories = GitHubUserInformation.getRepositories(user);
 
-        assertEquals(2, repositories.length);
+            assertNotNull("Finish the getRepositories method to make the API call, " +
+                    "\n and create and return an array of GitHubRepository objects containing information from the API response", repositories);
 
-        // Expect repositories in alphabetical order, so owls then spells.
+            assertEquals("If an example user has 2 repositories, the length of the array returned should be 2", 2, repositories.length);
 
-        GitHubRepository owlRepo = repositories[0];
-        String repoName = (String) repoNameField.get(owlRepo);
-        assertEquals("owls", repoName);
-        String repoLang = (String) languageField.get(owlRepo);
-        assertEquals("Python", repoLang);
-        int repoSize = repoSizeField.getInt(owlRepo);
-        assertEquals(1, repoSize);
+            // Expect repositories in alphabetical order, so owls, then spells.
 
-        GitHubRepository spellsRepo = repositories[1];
-        repoName = (String) repoNameField.get(spellsRepo);
-        assertEquals("spells", repoName);
-        repoLang = (String) languageField.get(spellsRepo);
-        assertEquals("C#", repoLang);
-        repoSize = repoSizeField.getInt(spellsRepo);
-        assertEquals(16, repoSize);
+            GitHubRepository owlRepo = repositories[0];
+            String repoName = (String) repoNameField.get(owlRepo);
+            assertEquals("Store the name of the repository in the name field in the GitHubRepository object", "owls", repoName);
+            String repoLang = (String) languageField.get(owlRepo);
+            assertEquals("Store the language of the repository in the language field in the GitHubRepository object", "Python", repoLang);
+            int repoSize = repoSizeField.getInt(owlRepo);
+            assertEquals("Store the size of the repository in the size field in the GitHubRepository object", 1, repoSize);
 
+            GitHubRepository spellsRepo = repositories[1];
+            repoName = (String) repoNameField.get(spellsRepo);
+            assertEquals("Store the name of the repository in the name field in the GitHubRepository object", "spells", repoName);
+            repoLang = (String) languageField.get(spellsRepo);
+            assertEquals("Store the language of the repository in the language field in the GitHubRepository object", "C#", repoLang);
+            repoSize = repoSizeField.getInt(spellsRepo);
+            assertEquals("Store the size of the repository in the size field in the GitHubRepository object", 16, repoSize);
+
+        } catch (Exception e) {
+            System.err.println(e);
+            fail("""
+                This part of the test looks at the GitHubRepository class and checks that it has the expected fields, and the 
+                values of those fields are the expected values, with data from the API response. 
+                If an error occurs here, make sure your fields are public.
+                And, make sure the field names in your classes match the property names in the JSON response.
+                And, make sure the fields have the expected types. """);
+        }
     }
 
 
     @Test(timeout = TIMEOUT)
-    public void displayGitHubUserInformation() throws Exception {
+    public void displayGitHubUserInformation() {
 
         GitHubUser exampleUser = new GitHubUser();
-
-        loginField.set(exampleUser, "Hermione Granger");
-        locationField.set(exampleUser, "London, England");
-
-        // And some example repositories, need a name and language and size
-
         GitHubRepository repo1 = new GitHubRepository();
-        languageField.set(repo1, "JavaScript");
-        repoNameField.set(repo1, "Spells");
-        repoSizeField.set(repo1, 404);
-
         GitHubRepository repo2 = new GitHubRepository();
-        languageField.set(repo2, "C#");
-        repoNameField.set(repo2, "Owls");
-        repoSizeField.set(repo2, 12345678);
+
+        try {
+            // Set up the user,
+            loginField.set(exampleUser, "Hermione Granger");
+            locationField.set(exampleUser, "London, England");
+
+            // and two repositories,
+            repoNameField.set(repo1, "Hats");
+            languageField.set(repo1, "Swift");
+            repoSizeField.set(repo1, 404);
+
+            repoNameField.set(repo2, "Bats");
+            languageField.set(repo2, "Ruby");
+            repoSizeField.set(repo2, 12345678);
+
+        } catch (Exception e) {
+            System.err.println(e);
+            fail("""
+                    This part of the test looks at the GitHubRepository class and checks that it has the expected fields, and the 
+                    values of those fields are the expected values, with data from the API response. 
+                    If an error occurs here, make sure your fields are public.
+                    And, make sure the field names in your classes match the property names in the JSON response.
+                    And, make sure the fields have the expected types. """);
+        }
 
         GitHubRepository[] repos = { repo1, repo2 };
 
@@ -126,11 +176,14 @@ public class GitHubUserInformationTest {
 
         assertTrue("Print the user's name", textPrinted.contains("Hermione Granger"));
         assertTrue("Print the user's location", textPrinted.contains("London, England"));
+
+        assertTrue("Print the name of each repository", textPrinted.contains("Hats"));
+        assertTrue("Print the language used by each repository.", textPrinted.contains("Swift"));
         assertTrue("Print the size of each repository. Include the units, KB", textPrinted.contains("404 KB"));
 
-        assertTrue("Print the name of each repository", textPrinted.contains("Spells"));
-        assertTrue("Print the name of each repository", textPrinted.contains("Owls"));
+        assertTrue("Print the name of each repository", textPrinted.contains("Bats"));
         assertTrue("Print the size of each repository. Include the units, KB", textPrinted.contains("12345678 KB"));
+        assertTrue("Print the language used by each repository.", textPrinted.contains("Ruby"));
 
     }
 
@@ -140,7 +193,7 @@ public class GitHubUserInformationTest {
 
         fail("This test will always fail.\n" +
                 "The tests for this lab can't check everything about your code since it uses API calls and external APIs. \n" +
-                "It is possible to pass the tests but not meet the assignment expectations. \n" +
+                "It is possible to write code that passes the tests, but does not meet the assignment expectations. \n" +
                 "Carefully follow the instructions given. \n" +
                 "Your code will be human-reviewed. Please email me if you would like me to check your work.");
     }

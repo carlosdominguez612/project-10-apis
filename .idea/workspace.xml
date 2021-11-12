@@ -10,15 +10,19 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="renumber">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grades/grade_scheme.json" beforeDir="false" afterPath="$PROJECT_DIR$/grades/grade_scheme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/Q2_github/GitHubRepositoryListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/Q2_github/GitHubUserInformationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/q1_compliment/RandomComplimentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/q1_compliment/RandomComplimentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/q2_github/GitHubUserInformationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/q2_github/GitHubUserInformationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +181,10 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="week_9" />
+      <recent name="week_8.agile_waterfall" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="week_12.Q2_github" />
       <recent name="week_12.Q1_compliment" />
@@ -186,9 +194,6 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="week_12.test_utils" />
@@ -204,12 +209,11 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="week_9" />
-      <recent name="week_8.agile_waterfall" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RandomComplimentTest">
+  <component name="RunManager" selected="JUnit.GitHubUserInformationTest.getUserLocation">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -375,6 +379,39 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method v="2" />
     </configuration>
+    <configuration name="GitHubUserInformationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java_Auto_Grader_12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week_12.q2_github.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="week_12.q2_github" />
+      <option name="MAIN_CLASS_NAME" value="week_12.q2_github.GitHubUserInformationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GitHubUserInformationTest.getUserLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java_Auto_Grader_12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week_12.q2_github.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="week_12.q2_github" />
+      <option name="MAIN_CLASS_NAME" value="week_12.q2_github.GitHubUserInformationTest" />
+      <option name="METHOD_NAME" value="getUserLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RandomComplimentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java_Auto_Grader_12" />
       <extension name="coverage">
@@ -386,57 +423,6 @@
       <option name="PACKAGE_NAME" value="week_12.Q1_compliment" />
       <option name="MAIN_CLASS_NAME" value="week_12.Q1_compliment.RandomComplimentTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomComplimentTest.ComplementResponseClassCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java_Auto_Grader_12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="week_12.Q1_compliment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="week_12.Q1_compliment" />
-      <option name="MAIN_CLASS_NAME" value="week_12.Q1_compliment.RandomComplimentTest" />
-      <option name="METHOD_NAME" value="ComplementResponseClassCreated" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomComplimentTest.getRandomCompliment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java_Auto_Grader_12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="week_12.Q1_compliment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="week_12.Q1_compliment" />
-      <option name="MAIN_CLASS_NAME" value="week_12.Q1_compliment.RandomComplimentTest" />
-      <option name="METHOD_NAME" value="getRandomCompliment" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomComplimentTest.getRandomComplimentUsesAsObjectWithExpectedClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java_Auto_Grader_12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="week_12.Q1_compliment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="week_12.Q1_compliment" />
-      <option name="MAIN_CLASS_NAME" value="week_12.Q1_compliment.RandomComplimentTest" />
-      <option name="METHOD_NAME" value="getRandomComplimentUsesAsObjectWithExpectedClass" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -461,6 +447,21 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="week_12 in Java_Auto_Grader_12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java_Auto_Grader_12" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="week_12" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -541,19 +542,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.RandomComplimentTest.getRandomCompliment" />
       <item itemvalue="JUnit.RandomComplimentTest" />
-      <item itemvalue="JUnit.RandomComplimentTest.ComplementResponseClassCreated" />
       <item itemvalue="JUnit.RandomComplimentTest.testGetRandomCompliment" />
-      <item itemvalue="JUnit.RandomComplimentTest.getRandomComplimentUsesAsObjectWithExpectedClass" />
+      <item itemvalue="JUnit.GitHubUserInformationTest" />
+      <item itemvalue="JUnit.GitHubUserInformationTest.getUserLocation" />
+      <item itemvalue="JUnit.week_12 in Java_Auto_Grader_12" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GitHubUserInformationTest.getUserLocation" />
+        <item itemvalue="JUnit.week_12 in Java_Auto_Grader_12" />
+        <item itemvalue="JUnit.GitHubUserInformationTest" />
         <item itemvalue="JUnit.RandomComplimentTest" />
         <item itemvalue="JUnit.RandomComplimentTest.testGetRandomCompliment" />
-        <item itemvalue="JUnit.RandomComplimentTest.getRandomComplimentUsesAsObjectWithExpectedClass" />
-        <item itemvalue="JUnit.RandomComplimentTest.ComplementResponseClassCreated" />
-        <item itemvalue="JUnit.RandomComplimentTest.getRandomCompliment" />
       </list>
     </recent_temporary>
   </component>
@@ -922,7 +923,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605588782974</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="sols">
+      <created>1636751132280</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1636751132280</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView">
@@ -945,7 +953,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -966,7 +986,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Q6" />
     <MESSAGE value="setting up wk 7&#10;" />
     <MESSAGE value="Insect class structure checks" />
     <MESSAGE value="HVAC...." />
@@ -991,29 +1010,30 @@
     <MESSAGE value="renumber" />
     <MESSAGE value="minor updates &amp; cleanup, Java 14, remove unused files" />
     <MESSAGE value="set title" />
-    <option name="LAST_COMMIT_MESSAGE" value="set title" />
+    <MESSAGE value="sols" />
+    <option name="LAST_COMMIT_MESSAGE" value="sols" />
   </component>
   <component name="WindowStateProjectService">
     <state x="529" y="159" key="#com.intellij.ide.util.MemberChooser" timestamp="1636735876613">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="529" y="159" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1636735876613" />
-    <state width="1306" height="369" key="GridCell.Tab.0.bottom" timestamp="1636737307558">
+    <state width="1356" height="212" key="GridCell.Tab.0.bottom" timestamp="1636752424445">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="369" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1636737307558" />
-    <state width="1306" height="369" key="GridCell.Tab.0.center" timestamp="1636737307557">
+    <state width="1356" height="212" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1636752424445" />
+    <state width="1356" height="212" key="GridCell.Tab.0.center" timestamp="1636752424443">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="369" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1636737307557" />
-    <state width="1306" height="369" key="GridCell.Tab.0.left" timestamp="1636737307557">
+    <state width="1356" height="212" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1636752424443" />
+    <state width="1356" height="212" key="GridCell.Tab.0.left" timestamp="1636752424442">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="369" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1636737307557" />
-    <state width="1306" height="369" key="GridCell.Tab.0.right" timestamp="1636737307558">
+    <state width="1356" height="212" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1636752424442" />
+    <state width="1356" height="212" key="GridCell.Tab.0.right" timestamp="1636752424444">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="369" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1636737307558" />
+    <state width="1356" height="212" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1636752424444" />
     <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1636741708776">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -1022,6 +1042,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="31" y="144" width="944" height="640" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1636743134816" />
+    <state x="427" y="181" key="git4idea.branch.GitSmartOperationDialog" timestamp="1636751144496">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="427" y="181" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.877@0.23.1440.877" timestamp="1636751144496" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
