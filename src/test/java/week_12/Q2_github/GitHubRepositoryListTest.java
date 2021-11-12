@@ -10,14 +10,14 @@ import static org.junit.Assert.*;
 
 public class GitHubRepositoryListTest {
 
-    Class userClass;
-    Field loginField;
-    Field locationField;
-    Field nameField;
+    static Class userClass;
+    static Field loginField;
+    static Field locationField;
+    static Field nameField;
 
-    Class repoClass;
-    Field languageField;
-    Field repoNameField;
+    static Class repoClass;
+    static Field languageField;
+    static Field repoNameField;
 
     private final int TIMEOUT = 20000;  // 20 seconds, big timeout since API will be slow to wake up if not used for an hour.
 
@@ -25,14 +25,14 @@ public class GitHubRepositoryListTest {
     @BeforeClass
     public static void gitHubRepositoryList() throws Exception {
 
-        Class userClass = GitHubUser.class;
-        Field loginField = userClass.getField("login");
-        Field locationField = userClass.getField("location");
-        Field nameField = userClass.getField("name");
+         userClass = GitHubUser.class;
+         loginField = userClass.getField("login");
+         locationField = userClass.getField("location");
+         nameField = userClass.getField("name");
 
-        Class repoClass = GitHubRepository.class;
-        Field languageField = repoClass.getField("language");
-        Field repoNameField = repoClass.getField("name");
+         repoClass = GitHubRepository.class;
+         languageField = repoClass.getField("language");
+         repoNameField = repoClass.getField("name");
 
     }
 
@@ -45,7 +45,7 @@ public class GitHubRepositoryListTest {
         String loginName = (String) loginField.get(user);
         assertEquals("claraj", loginName);
 
-        String location = (String) loginField.get(user);
+        String location = (String) locationField.get(user);
         assertEquals("Minneapolis, MN", location);
 
         String name = (String) nameField.get(user);
@@ -57,7 +57,7 @@ public class GitHubRepositoryListTest {
         loginName = (String) loginField.get(user);
         assertEquals("hello-java-class", loginName);
 
-        location = (String) loginField.get(user);
+        location = (String) locationField.get(user);
         assertEquals("Canada", location);
 
         name = (String) nameField.get(user);
@@ -85,9 +85,9 @@ public class GitHubRepositoryListTest {
         assertEquals("Python", repoLang);
 
         GitHubRepository spellsRepo = repositories[1];
-        repoName = (String) repoNameField.get(owlRepo);
+        repoName = (String) repoNameField.get(spellsRepo);
         assertEquals("spells", repoName);
-        repoLang = (String) languageField.get(owlRepo);
+        repoLang = (String) languageField.get(spellsRepo);
         assertEquals("C#", repoLang);
 
     }
@@ -105,11 +105,11 @@ public class GitHubRepositoryListTest {
 
         GitHubRepository repo1 = new GitHubRepository();
         languageField.set(repo1, "JavaScript");
-        nameField.set(repo1, "Spells");
+        repoNameField.set(repo1, "Spells");
 
         GitHubRepository repo2 = new GitHubRepository();
         languageField.set(repo2, "C#");
-        nameField.set(repo2, "Owls");
+        repoNameField.set(repo2, "Owls");
 
         GitHubRepository[] repos = { repo1, repo2 };
 
