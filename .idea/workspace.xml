@@ -9,46 +9,21 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="renumber">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_konghq_unirest_java_standalone_3_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_minneapolis_input_utils_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpasyncclient_4_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_nio_4_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_inline_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week_12/Q1_compliment/RandomCompliment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/week_12/Q1_compliment/RandomComplimentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubRepositoryList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/week_12/Q2_github/GitHubRepositoryListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/week_12/test_utils/ArrayListUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/week_12/test_utils/MethodUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/week_12/test_utils/PrintUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Auto_Grader_12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Auto_Grader_12.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 12 Questions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 12 Questions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Feedback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/FeedbackTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q1_compliment/RandomCompliment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/Q1_compliment/RandomCompliment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/Q1_compliment/RandomComplimentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/Q1_compliment/RandomComplimentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +170,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/week_12" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="options.lastSelected" value="configurable.group.tools" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -208,11 +183,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="week_12.Q2_github" />
       <recent name="week_12.Q1_compliment" />
       <recent name="week_9" />
       <recent name="week_8.garden" />
       <recent name="week_8.snake" />
-      <recent name="week_7.insects" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -221,17 +196,18 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="week_12.test_utils" />
       <recent name="week_11" />
       <recent name="week_9" />
       <recent name="week_7.ticket" />
       <recent name="input" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/week_12" />
       <recent name="$PROJECT_DIR$/src/main/java/week_9" />
       <recent name="$PROJECT_DIR$/src/main/java/week_7/hvac" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/java" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="week_9" />
@@ -627,7 +603,7 @@
       <workItem from="1571719194264" duration="301000" />
       <workItem from="1605587628552" duration="2652000" />
       <workItem from="1606226782639" duration="2768000" />
-      <workItem from="1636726063904" duration="10436000" />
+      <workItem from="1636726063904" duration="15469000" />
     </task>
     <task id="LOCAL-00001" summary="Start of week 5">
       <created>1496361654279</created>
@@ -1027,26 +1003,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="529" y="159" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1636735876613" />
-    <state width="1306" height="158" key="GridCell.Tab.0.bottom" timestamp="1636737101066">
+    <state width="1306" height="369" key="GridCell.Tab.0.bottom" timestamp="1636737307558">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="158" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1636737101066" />
-    <state width="1306" height="158" key="GridCell.Tab.0.center" timestamp="1636737101065">
+    <state width="1306" height="369" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1636737307558" />
+    <state width="1306" height="369" key="GridCell.Tab.0.center" timestamp="1636737307557">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="158" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1636737101065" />
-    <state width="1306" height="158" key="GridCell.Tab.0.left" timestamp="1636737101065">
+    <state width="1306" height="369" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1636737307557" />
+    <state width="1306" height="369" key="GridCell.Tab.0.left" timestamp="1636737307557">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="158" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1636737101065" />
-    <state width="1306" height="158" key="GridCell.Tab.0.right" timestamp="1636737101066">
+    <state width="1306" height="369" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1636737307557" />
+    <state width="1306" height="369" key="GridCell.Tab.0.right" timestamp="1636737307558">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1306" height="158" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1636737101066" />
-    <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1636728205408">
+    <state width="1306" height="369" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1636737307558" />
+    <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1636741708776">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877@0.23.1440.877" timestamp="1636728205408" />
+    <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877@0.23.1440.877" timestamp="1636741708776" />
+    <state x="31" y="144" width="944" height="640" key="find.popup" timestamp="1636743134816">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="31" y="144" width="944" height="640" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1636743134816" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

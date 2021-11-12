@@ -24,15 +24,15 @@ public class RandomCompliment {
         *    }
         *
         * TODO Create a Java class that maps to the structure of the response.
-         *  The Java class should be called ComplimentResponse.
-         *  The ComplimentResponse class should NOT be a nested class.
+         *  The Java class should be called Compliment.
+         *  The Compliment class should NOT be a nested class.
         *    Define this class outside of the RandomCompliment class in this file, or in a separate file.
-        *  The ComplimentResponse class should have a public field, or public get and set methods to save the text property.
+        *  The Compliment class should have a public field, or public get and set methods to save the text property.
         *
         * Remember that field(s) in classes used to store API responses,
         * need to to match the names of properties in the JSON response.
         *
-        * TODO Make a request to the API and store the response in a ComplimentResponse object.
+        * TODO Make a request to the API and store the response in a Compliment object.
         *
         * TODO Extract and return the text - the compliment text.
         *

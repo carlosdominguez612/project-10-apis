@@ -67,20 +67,20 @@ public class RandomComplimentTest {
 
         // TODO separate file?
         try {
-            Class complimentResponse = Class.forName("week_12.Q1_compliment.ComplimentResponse");
+            Class complimentClass = Class.forName("week_12.Q1_compliment.Compliment");
             System.out.println("Found Compliment class, standalone");
-            return complimentResponse;
+            return complimentClass;
         } catch(Exception e) {
 
             // not found, check for nested class but tell student to move to standalone
             try {
                 // TODO nested classes not allowed. Can't create as easily with reflection.
-                Class complimentResponse = Class.forName("week_12.Q1_compliment.RandomCompliment$ComplimentResponse");
-                System.err.println("Found ComplimentResponse class, defined as a nested class. " +
+                Class complimentResponse = Class.forName("week_12.Q1_compliment.RandomCompliment$Compliment");
+                System.err.println("Found Compliment class, defined as a nested class. " +
                         "\nMove the class definition outside of the RandomCompliment class.");
                 return null;
             } catch(Exception ex) {
-                System.out.println("Did not find ComplimentResponse as a nested class either");
+                System.out.println("Did not find Compliment class as a nested class either");
             }
         }
         return null;
@@ -90,13 +90,13 @@ public class RandomComplimentTest {
     @Test(timeout = TIMEOUT)
     public void testGetRandomCompliment() throws Exception {
 
-        // Mock Unirest's .getBody and return pre-generated ComplimentResponse
+        // Mock Unirest's .getBody and return pre-generated Compliment
         // ensure getRandomCompliment returns the String from the class
 
         String exampleCompliment = "You are an outstandingly great Java programmer!";
 
         Class complimentResponseClass = findComplimentResponseClass();
-        assertNotNull("Create a ComplimentResponse class", complimentResponseClass);
+        assertNotNull("Create a Compliment class", complimentResponseClass);
 
         Constructor[] constructors = complimentResponseClass.getDeclaredConstructors();
 
@@ -135,7 +135,6 @@ public class RandomComplimentTest {
 
         // So we should have an object with a pre-packaged string
 
-
         // Replace default object mapper with one that always returns the mock object with mock data
         Unirest.config().setObjectMapper(new MockObjectMapper(crc));
 
@@ -163,15 +162,17 @@ public class RandomComplimentTest {
     }
 
     @Test(timeout = TIMEOUT)
-    public void ComplementResponseClassCreated() {
+    public void ComplimentResponseClassCreated() {
 
-        // Ensure correct ComplimentResponse class is created
-        // It may be a nested class of RandomCompliment or a standalone
+        // Ensure correct Compliment class is created
+        // It can work as a nested class of RandomCompliment or a standalone but lab
+        // requires standalone class.
+        //
 
         // Ensure it has one field, a String text
         // or get and set text methods
-        String msg = "Can't find ComplimentResponse class. Use this exact name. " +
-                "\nDefine this class in the same file or a new file in the Q1_compliment directory.";
+        String msg = "Can't find Compliment class. Use this exact name for the class. " +
+                "\nDefine this class in the same file as RandomCompliment (but not as a nested class) or a new file in the Q1_compliment directory.";
 
         Class complimentResponseClass = findComplimentResponseClass();
         assertNotNull(msg, complimentResponseClass);
@@ -181,10 +182,10 @@ public class RandomComplimentTest {
         // Student may use a public field,
         if (fields.length == 1) {
             String name = fields[0].getName();
-            assertEquals("ComplimentResponse should have one String field called 'text'", name, "text");
+            assertEquals("Compliment class should have one String field called 'text'", name, "text");
 
             Class type = fields[0].getType();
-            assertEquals("ComplimentResponse should have one String field called 'text'", String.class, type);
+            assertEquals("Compliment class should have one String field called 'text'", String.class, type);
         }
 
         // Or, a private field of any name, and public or protected get and set methods. Private fields not returned by getFields
@@ -201,7 +202,7 @@ public class RandomComplimentTest {
 
         else {
             // Extra fields?  Not needed, so test fail
-            fail("The ComplimentResponse class should only have the field(s) and/or methods needed to map to the JSON response.\n" +
+            fail("The Compliment class should only have the field(s) and/or methods needed to map to the JSON response.\n" +
                     "Don't add any other fields or methods");
         }
 
