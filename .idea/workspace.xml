@@ -15,15 +15,16 @@
   <component name="ChangeListManager">
     <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="renumber">
       <change afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubRepositoryList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/week_12/Q2_github/GitHubRepositoryListTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/week_12/test_utils/ArrayListUtils.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/week_12/test_utils/MethodUtil.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/week_12/test_utils/PrintUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab 12 Questions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 12 Questions.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q1_compliment/RandomCompliment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/Q1_compliment/RandomCompliment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/Q2_github/GitHubUserInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/week_12/Q1_compliment/RandomComplimentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/Q1_compliment/RandomComplimentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/Q2_github/GitHubRepositoryListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/Q2_github/GitHubRepositoryListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -603,7 +604,7 @@
       <workItem from="1571719194264" duration="301000" />
       <workItem from="1605587628552" duration="2652000" />
       <workItem from="1606226782639" duration="2768000" />
-      <workItem from="1636726063904" duration="15469000" />
+      <workItem from="1636726063904" duration="16328000" />
     </task>
     <task id="LOCAL-00001" summary="Start of week 5">
       <created>1496361654279</created>

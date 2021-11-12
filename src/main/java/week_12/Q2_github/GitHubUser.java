@@ -5,7 +5,7 @@ public class GitHubUser {
 
     /*
         TODO finish this class.
-            This should contain feilds for a
+            This should contain fields for a
             GitHub user's login, their name, and their location.
 
         Use public fields. Don't use private fields with getters and setters.

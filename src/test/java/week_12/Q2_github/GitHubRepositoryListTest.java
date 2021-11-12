@@ -2,11 +2,9 @@ package week_12.Q2_github;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import week_12.test_utils.ArrayListUtils;
 import week_12.test_utils.PrintUtils;
 
 import java.lang.reflect.Field;
-
 
 import static org.junit.Assert.*;
 
@@ -21,11 +19,11 @@ public class GitHubRepositoryListTest {
     Field languageField;
     Field repoNameField;
 
-
     private final int TIMEOUT = 20000;  // 20 seconds, big timeout since API will be slow to wake up if not used for an hour.
 
+
     @BeforeClass
-    public static void GitHubRepositoryList() throws Exception {
+    public static void gitHubRepositoryList() throws Exception {
 
         Class userClass = GitHubUser.class;
         Field loginField = userClass.getField("login");

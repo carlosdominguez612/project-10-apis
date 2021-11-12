@@ -6,6 +6,9 @@ The tests for this lab can't check everything about your code since it uses API 
 It is possible to pass the tests but not meet the assignment expectations. Follow the instructions given carefully. 
 Your code will be human-reviewed. Email me if you would like me to check your work.
 
+The APIs in this lab are open access. 
+None of the APIs used here require accounts or authentication. 
+
 ### Random Compliment API
 
 Finish the program that displays a random compliment.
@@ -16,9 +19,28 @@ The API URL you will use is https://random-compliment.herokuapp.com/random
 
 Finish this program. A user will enter the name of a GitHub user.  
 
-Your program will connect to the GitHub API and request a 
+Your program will connect to the GitHub API and request information about a GitHub user,
+Their name
+Their login name
+Their location
+The names and languages of their repositories. 
 
-### GitHub User list of Repositories 
+The API URLs you will use are in this format.  
 
+Assuming we want information about Guido Van Rossum, the Python language creator, whose GitHub username is gvanrossum
+
+User information
+https://api.github.com/users/gvanrossum
+
+List of repositories
+https://api.github.com/users/gvanrossum/repos
+
+Replace gvanrossum with the username of the user that you want information about. 
+
+Some other usernames you can try are,
+
+* Linus Torvalds's (created the Linux operating system) GitHub username is torvalds
+* Moxie Marlinspike's (computer security researcher) GitHub username is moxie0
+* Marcus Persson (created Minecraft) GitHub username is xnotch
 
   
