@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="renumber">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q1_compliment/RandomCompliment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q1_compliment/RandomCompliment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubUserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubUserInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Auto_Grader_12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Auto_Grader_12.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -600,13 +597,7 @@
       <workItem from="1605587628552" duration="2652000" />
       <workItem from="1606226782639" duration="2768000" />
       <workItem from="1636726063904" duration="16328000" />
-    </task>
-    <task id="LOCAL-00003" summary="w5 Q1 done">
-      <created>1496362698283</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1496362698283</updated>
+      <workItem from="1636755063044" duration="453000" />
     </task>
     <task id="LOCAL-00004" summary="w5 Q1, Q2">
       <created>1501716284627</created>
@@ -944,7 +935,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636754353745</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="be consistent login &amp; username">
+      <created>1636755079734</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1636755079734</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1000,7 +998,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Q2 HVAC documentation, tests for different date formats" />
     <MESSAGE value="Ticket cleanup" />
     <MESSAGE value="Lab 8 blood donor GUI" />
     <MESSAGE value="Lab 8 Agile or Waterfall start&#10;" />
@@ -1025,7 +1022,8 @@
     <MESSAGE value=" instructions" />
     <MESSAGE value="instructions" />
     <MESSAGE value="Remove unused println" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused println" />
+    <MESSAGE value="be consistent login &amp; username" />
+    <option name="LAST_COMMIT_MESSAGE" value="be consistent login &amp; username" />
   </component>
   <component name="WindowStateProjectService">
     <state x="138" y="123" width="1198" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1636755056720">
@@ -1052,10 +1050,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1356" height="198" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1636755056666" />
-    <state x="337" y="188" key="Vcs.Push.Dialog.v2" timestamp="1636754354929">
+    <state x="337" y="188" key="Vcs.Push.Dialog.v2" timestamp="1636755081611">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="337" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1636754354929" />
+    <state x="337" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1636755081611" />
     <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1636741708776">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

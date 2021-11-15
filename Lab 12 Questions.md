@@ -27,11 +27,17 @@ you'll think about how to handle these errors. For this lab, assume that the req
 
 Finish the program that displays a random compliment.
 
+API documentation: https://github.com/claraj/compliments_API
+
 The API URL you will use is https://random-compliment.herokuapp.com/random
 
 ### GitHub User Information API
 
-Finish this program. A user will enter the name of a GitHub user.  
+Finish this program that displays information about a GitHub user. 
+
+A user will enter the name of a GitHub user.  
+
+API documentation: https://docs.github.com/en/rest/overview/endpoints-available-for-github-apps
 
 Your program will connect to the GitHub API and request information about a GitHub user,
 Their name
