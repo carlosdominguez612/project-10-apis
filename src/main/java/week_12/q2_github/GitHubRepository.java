@@ -10,13 +10,13 @@ public class GitHubRepository {
             The repository language,
             The repository size.  The size is an integer number of KB.
 
-        Use public fields. Don't use private fields with getters and setters.
+        TODO Use public fields. Don't use private fields with getters and setters.
 
-        For example, the first repository this response,
+        For example, the first repository this response, as of November 2021,
         https://api.github.com/users/gvanrossum/repos
         The name is "500lines"
         The language is "Python"
-        The size (as of November 2021, it may have changed) is 565.
+        The size is 565.
 
     */
 

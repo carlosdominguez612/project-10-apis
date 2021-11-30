@@ -31,6 +31,7 @@ API documentation: https://github.com/claraj/compliments_API
 
 The API URL you will use is https://random-compliment.herokuapp.com/random
 
+
 ### GitHub User Information API
 
 Finish this program that displays information about a GitHub user. 

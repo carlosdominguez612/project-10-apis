@@ -8,7 +8,7 @@ public class GitHubUser {
             This should contain fields for a
             GitHub user's login, their name, and their location.
 
-        Use public fields. Don't use private fields with getters and setters.
+        TODO Use public fields. Don't use private fields with getters and setters.
 
         For example, in this response,
         https://api.github.com/users/gvanrossum

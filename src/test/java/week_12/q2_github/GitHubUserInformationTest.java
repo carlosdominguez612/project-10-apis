@@ -20,7 +20,7 @@ public class GitHubUserInformationTest {
     static Field repoNameField;
     static Field repoSizeField;
 
-    private final int TIMEOUT = 20000;  // 20 seconds, big timeout since API will be slow to wake up if not used for an hour.
+    private final int TIMEOUT = 20000;  // 20 seconds, big timeout to account for slow internet connections, slow responses from API etc.
 
 
     @BeforeClass
@@ -40,7 +40,7 @@ public class GitHubUserInformationTest {
             System.err.println(e);
             fail("""
         This part of the test looks at the GitHubUser and GitHubRepository classes and checks that they have the expected fields. 
-        If an error occurs here, make sure your fields are public.
+        If an error occurs here, make sure your fields in the GitHubUser and GitHubRepository classes are public.
         And, make sure the field names in your classes match the property names in the JSON response. """);
         }
     }
@@ -146,8 +146,8 @@ public class GitHubUserInformationTest {
 
         try {
             // Set up the user,
-            loginField.set(exampleUser, "Hermione Granger");
-            locationField.set(exampleUser, "London, England");
+            loginField.set(exampleUser, "Wednesday Addams");
+            locationField.set(exampleUser, "New Jersey, USA");
 
             // and two repositories,
             repoNameField.set(repo1, "Hats");
@@ -174,8 +174,8 @@ public class GitHubUserInformationTest {
         GitHubUserInformation.displayGitHubUserInformation(exampleUser, repos);
         String textPrinted = PrintUtils.resetStandardOut();
 
-        assertTrue("Print the user's name", textPrinted.contains("Hermione Granger"));
-        assertTrue("Print the user's location", textPrinted.contains("London, England"));
+        assertTrue("Print the user's name", textPrinted.contains("Wednesday Addams"));
+        assertTrue("Print the user's location", textPrinted.contains("New Jersey, USA"));
 
         assertTrue("Print the name of each repository", textPrinted.contains("Hats"));
         assertTrue("Print the language used by each repository.", textPrinted.contains("Swift"));

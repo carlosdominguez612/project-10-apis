@@ -116,6 +116,9 @@ public class GitHubUserInformation {
          * probably crash. In a real program, you would definitely need to handle this possibility.
          * For this lab, we'll assume the user will only enter login usernames of people who do have GitHub accounts.
          *
+         * (Optional) However, you are welcome to investigate how to deal with usernames not found, and implement
+         * code that determines if a user is not found, and handles this event appropriately - for example,
+         * display a "Not found" message to the user, and not crash.
          * */
 
         return null;  // TODO delete and replace with your code
@@ -125,16 +128,17 @@ public class GitHubUserInformation {
     public static void displayGitHubUserInformation(GitHubUser user, GitHubRepository[] repositories) {
 
         // TODO display information about the GitHub user.
-        //  Display (print) the
-        //   GitHub user's login,
-        //   Their name
-        //   Their location
+        //  Neatly display (print)
+        //      The GitHub user's login,
+        //      Their name
+        //      Their location
 
         // TODO for each repository,
-        //  display the repository's name
-        //  the repository's language
-        //  the repository's size. Include the units, KB, with the number.
-        //      So, if a repository's size is 100, display "100 KB" with a space between the number and "KB".
+        //  Neatly display
+        //      the repository's name
+        //      the repository's language
+        //      the repository's size. Include the units, KB, with the number.
+        //          So, if a repository's size is 100, display "100 KB" with a space between the number and "KB".
 
         // You do not need to make any API calls in this method.
         // You do not need to return anything from this method.
