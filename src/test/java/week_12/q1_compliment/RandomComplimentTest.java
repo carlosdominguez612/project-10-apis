@@ -85,10 +85,10 @@ public class RandomComplimentTest {
 
 
     @Test(timeout = TIMEOUT)
-    public void testGetRandomCompliment() throws Exception {
+    public void testStructureOfComplimentClassAndGetRandomCompliment() {
 
         System.out.println("This test makes an API call. " +
-                "\nSince the API is slow to respond when it hasn't been used for an hour, this test may take 10 seconds to complete.");
+                "\nSince the API is slow to respond when it hasn't been used for an hour, this test may take several seconds to complete.");
 
         String exampleCompliment = "You are an outstandingly great Java programmer!";
 
@@ -97,48 +97,84 @@ public class RandomComplimentTest {
 
         Constructor[] constructors = complimentResponseClass.getDeclaredConstructors();
 
+        // Expect one constructor, either the default constructor that is created if one is
+        // not specified, or the student may define a constructor. It is not necessary to define
+        // a constructor in the Compliment class for the purposes of using it to map JSON to
+        // Java objects, but in a program where Java objects are mapped to JSON, then a constructor
+        // may be convenient for creating Java objects within the program.
+
+        if (constructors.length > 1) {
+            fail("It is not necessary to create multiple constructors for the Compliment class");
+        }
+
         Object randomComplimentObject = null;
+
         try {
+
+            // Note that this test fails to discover and instantiate a Compliment object
+            // when the Compliment class is nested. Instructions specify standalone class.
+
             Constructor c = constructors[0];
-            randomComplimentObject = constructors[0].newInstance(null);
 
-            // Use getDeclaredConstructors to get the default constructor java makes if the class does not
-            // have a constructor.
-            Constructor defaultNoArgConstructor = complimentResponseClass.getDeclaredConstructor();
+            Class[] constructorParameterTypes = c.getParameterTypes();
 
-            // TODO this does not work when the class is nested. instructions specify standalone class
-            randomComplimentObject = defaultNoArgConstructor.newInstance();
+            if (constructorParameterTypes.length == 0) {
+                // Maybe a no-args constructor...
+                randomComplimentObject = c.newInstance();
+            } else if (constructorParameterTypes.length == 1) {
+                // or a constructor with a single String argument
+                randomComplimentObject = c.newInstance(exampleCompliment);
+            }
 
         } catch (Exception e) {
-            System.err.println(e);
-            fail("Can't create a mock response object because " + e.getMessage());
+            e.printStackTrace();
+            fail("Can't create a mock response Compliment object because " + e.getMessage());
         }
 
-        // either one text field or setName field
-        Field[] fields = complimentResponseClass.getFields();
+        // Expect either one public text field, or a public setText method.
 
-        if (fields.length == 1) {
-            Field textField = fields[0];
-            // check the type, name in another test
-            textField.set(randomComplimentObject, exampleCompliment);
+        boolean exampleTextSet = false;
+
+        try {
+            Field publicTextField = complimentResponseClass.getField("text");
+            assertEquals("The text field in the Compliment class should be a String field",
+                    publicTextField.getType(), String.class);
+            publicTextField.set(randomComplimentObject, exampleCompliment);
+            exampleTextSet = true;
+
+        } catch (Exception e) {
+            // No public text field, or unable to set. So try to find and call
+            // a public setText method.  Also check there is a matching public getText method.
+
+            try {
+                Method setText = complimentResponseClass.getMethod("setText", String.class);
+                Method getText = complimentResponseClass.getMethod("getText");
+                assertEquals("A getText method in the Compliment class should return a String",
+                        String.class, getText.getReturnType());
+
+                setText.invoke(randomComplimentObject, exampleCompliment);
+                exampleTextSet = true;
+            } catch (Exception ex) {
+                // unable to call the set text method either. May be wrong type of parameters, not public, or doesn't exist.
+                System.out.println("Unable to find either a public text field, or getters and setters for a private text field.");
+            }
         }
 
-        else {
-            // there must be setText method
-            Method setText = complimentResponseClass.getMethod("setText", String.class);
-            setText.invoke(randomComplimentObject, exampleCompliment);
-        }
+        assertTrue("The Compliment class must have either a public String text field " +
+                "\nor a private String text field, plus public getter (getText) and setter (setText) methods.",
+                exampleTextSet);
 
-        // So we should have an object with the pre-packaged string defined above,
-        // regardless of what the API actually returns
+        // So should have an object with the pre-packaged string defined above,
+        // regardless of what the API actually returns.
 
-        // Replace default object mapper with one that always returns the mock randomComplimentObject
-        // object with mock data
+        // Replace default object mapper with one that always returns the mock
+        // randomComplimentObject object with example data.
         Unirest.config().setObjectMapper(new MockObjectMapper(randomComplimentObject));
 
         String compliment = RandomCompliment.getRandomCompliment();
 
-        assertEquals("Return the text from the API response.", exampleCompliment, compliment);
+        assertEquals("Make an API call, and use the Compliment class to convert the the response into a Java object." +
+                "\nReturn the text from the API response from getRandomCompliment.", exampleCompliment, compliment);
     }
 
 

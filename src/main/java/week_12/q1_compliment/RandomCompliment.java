@@ -5,7 +5,7 @@ public class RandomCompliment {
 
 
     public static void main(String[] args) {
-        // You don't need to modify the main method
+        // You don't need to modify the main method.
         String compliment = getRandomCompliment();
         System.out.println(compliment);
     }
