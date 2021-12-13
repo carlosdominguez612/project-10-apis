@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="renumber">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q2_github/GitHubUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/q2_github/GitHubUserInformationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/q2_github/GitHubUserInformationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +173,7 @@
     <property name="options.lastSelected" value="configurable.group.tools" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -543,9 +541,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.RandomCompliment" />
       <item itemvalue="JUnit.GitHubUserInformationTest" />
       <item itemvalue="JUnit.RandomComplimentTest.testGetRandomCompliment" />
-      <item itemvalue="Application.RandomCompliment" />
       <item itemvalue="JUnit.RandomComplimentTest.testStructureOfComplimentClassAndGetRandomCompliment" />
       <item itemvalue="JUnit.GitHubUserInformationTest.displayGitHubUserInformation" />
     </list>
@@ -603,14 +601,8 @@
       <workItem from="1636726063904" duration="16328000" />
       <workItem from="1636755063044" duration="453000" />
       <workItem from="1637012441574" duration="146000" />
-      <workItem from="1638225045019" duration="2527000" />
-    </task>
-    <task id="LOCAL-00006" summary="w5 Q4 questions&#10;">
-      <created>1501794393553</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1501794393553</updated>
+      <workItem from="1638225045019" duration="2919000" />
+      <workItem from="1639415020661" duration="35000" />
     </task>
     <task id="LOCAL-00007" summary="Q5 underway">
       <created>1501797722091</created>
@@ -948,7 +940,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638230987081</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Tidy, highlight that fields in GitHub program should be public">
+      <created>1638231572675</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1638231572675</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1004,7 +1003,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Lab 8 Agile or Waterfall start&#10;" />
     <MESSAGE value="Snake" />
     <MESSAGE value="Gardener invoice program" />
     <MESSAGE value="Rubiks cube GUI program." />
@@ -1029,7 +1027,8 @@
     <MESSAGE value="be consistent login &amp; username" />
     <MESSAGE value="Include links to API documentation." />
     <MESSAGE value="Clean up code that looks at constructors in Compliment class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up code that looks at constructors in Compliment class" />
+    <MESSAGE value="Tidy, highlight that fields in GitHub program should be public" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidy, highlight that fields in GitHub program should be public" />
   </component>
   <component name="WindowStateProjectService">
     <state x="138" y="123" width="1198" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1636755056720">
@@ -1040,42 +1039,46 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="529" y="159" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1636754380116" />
-    <state width="1344" height="214" key="GridCell.Tab.0.bottom" timestamp="1638230854102">
+    <state width="1344" height="281" key="GridCell.Tab.0.bottom" timestamp="1638231578019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="214" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1638230854102" />
-    <state width="1344" height="214" key="GridCell.Tab.0.center" timestamp="1638230854102">
+    <state width="1344" height="281" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1638231578019" />
+    <state width="1344" height="281" key="GridCell.Tab.0.center" timestamp="1638231578019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="214" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1638230854102" />
-    <state width="1344" height="214" key="GridCell.Tab.0.left" timestamp="1638230854101">
+    <state width="1344" height="281" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1638231578019" />
+    <state width="1344" height="281" key="GridCell.Tab.0.left" timestamp="1638231578018">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="214" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1638230854101" />
-    <state width="1344" height="214" key="GridCell.Tab.0.right" timestamp="1638230854102">
+    <state width="1344" height="281" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1638231578018" />
+    <state width="1344" height="281" key="GridCell.Tab.0.right" timestamp="1638231578019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="214" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1638230854102" />
-    <state width="1344" height="281" key="GridCell.Tab.1.bottom" timestamp="1638229451718">
+    <state width="1344" height="281" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1638231578019" />
+    <state width="1344" height="281" key="GridCell.Tab.1.bottom" timestamp="1638231578020">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1638229451718" />
-    <state width="1344" height="281" key="GridCell.Tab.1.center" timestamp="1638229451717">
+    <state width="1344" height="281" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
+    <state width="1344" height="281" key="GridCell.Tab.1.center" timestamp="1638231578020">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1638229451717" />
-    <state width="1344" height="281" key="GridCell.Tab.1.left" timestamp="1638229451717">
+    <state width="1344" height="281" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
+    <state width="1344" height="281" key="GridCell.Tab.1.left" timestamp="1638231578020">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1638229451717" />
-    <state width="1344" height="281" key="GridCell.Tab.1.right" timestamp="1638229451717">
+    <state width="1344" height="281" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
+    <state width="1344" height="281" key="GridCell.Tab.1.right" timestamp="1638231578020">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1638229451717" />
-    <state x="337" y="188" key="Vcs.Push.Dialog.v2" timestamp="1638230988588">
+    <state width="1344" height="281" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
+    <state x="235" y="37" key="SettingsEditor" timestamp="1639415055110">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="337" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1638230988588" />
+    <state x="235" y="37" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1639415055110" />
+    <state x="337" y="188" key="Vcs.Push.Dialog.v2" timestamp="1638231575018">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="337" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1638231575018" />
     <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1636741708776">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
