@@ -8,7 +8,7 @@ public class GitHubRepository {
             This should contain fields for a
             GitHub repository name,
             The repository language,
-            The repository size.  The size is an integer number of KB.
+            The repository size.  The size is an int number of KB.
 
         TODO Use public fields. Don't use private fields with getters and setters.
 
