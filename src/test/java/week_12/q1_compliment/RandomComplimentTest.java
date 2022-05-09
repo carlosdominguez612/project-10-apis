@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 public class RandomComplimentTest {
 
-    private final int TIMEOUT = 20000;  // 20 seconds, big timeout since API will be slow to wake up if not used for an hour.
+    private final int TIMEOUT = 60000;  // 60 seconds, big timeout since API will be slow to wake up if not used for an hour.
 
     private static ObjectMapper originalMapper;
 
@@ -54,7 +54,7 @@ public class RandomComplimentTest {
 
         } catch (Exception e) {
             System.err.println(e);
-            // Unirest get not used in the expected way, or some other error.
+            // Unirest get method not used in the expected way, or some other error.
             fail("Use Unirest to get the random compliment.");
         }
     }
@@ -75,7 +75,6 @@ public class RandomComplimentTest {
                 Class complimentResponse = Class.forName("week_12.q1_compliment.RandomCompliment$Compliment");
                 System.err.println("Found Compliment class, defined as a nested class. " +
                         "\nMove the class definition outside of the RandomCompliment class.");
-                return null;
             } catch(Exception ex) {
                 System.out.println("Did not find Compliment class as a nested class either");
             }
@@ -195,6 +194,7 @@ public class RandomComplimentTest {
             return null;  // writes object to JSON string
         }
     }
+
 
     @Test(timeout = TIMEOUT)
     public void ComplimentResponseClassCreated() {

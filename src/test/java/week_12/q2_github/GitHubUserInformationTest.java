@@ -20,7 +20,7 @@ public class GitHubUserInformationTest {
     static Field repoNameField;
     static Field repoSizeField;
 
-    private final int TIMEOUT = 20000;  // 20 seconds, big timeout to account for slow internet connections, slow responses from API etc.
+    private final int TIMEOUT = 60000;  // 60 seconds, big timeout to account for slow internet connections, slow responses from API etc.
 
 
     @BeforeClass
