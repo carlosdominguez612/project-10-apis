@@ -19,8 +19,9 @@ that the computer running the code has an internet connection,
 the API is working, and that the API server accepts the request 
 and provides a response in the expected format.
 
-Obviously there are several possibly ways that things can go wrong - as you work with APIs in future programs, 
+Obviously, there are several possibly ways that things can go wrong - as you work with APIs in future programs, 
 you'll think about how to handle these errors. For this lab, assume that the requests will work. 
+Do make sure you have an internet connection as you work on this lab.
 
 
 ### Random Compliment API
@@ -31,6 +32,8 @@ API documentation: https://github.com/claraj/compliments_API
 
 The API URL you will use is https://random-compliment.herokuapp.com/random
 
+The API server "sleeps" when it hasn't been used for an hour, and will take a few seconds to wake up. 
+So, the first request your program makes can take 10-15 seconds to complete. This is normal, and if your program correctly displays the compliment, your code is working. 
 
 ### GitHub User Information API
 
@@ -41,27 +44,28 @@ A user will enter the name of a GitHub user.
 API documentation: https://docs.github.com/en/rest/overview/endpoints-available-for-github-apps
 
 Your program will connect to the GitHub API and request information about a GitHub user,
-Their name
-Their login name
-Their location
-The name, language, and size of each of their repositories. 
+* Their name
+* Their login name
+* Their location
+* For each one of their repositories, 
+  * The name, 
+  * language, 
+  * size 
 
-The API URLs you will use are in this format.  
+You will need to create a URL that includes a GitHub username. 
+ 
+If we want information about Guido Van Rossum, the Python language creator, using his GitHub username, **gvanrossum**.
 
-Assuming we want information about Guido Van Rossum, the Python language creator, whose GitHub username is gvanrossum
-
-User information
+User information can be fetched with the URL,
 https://api.github.com/users/gvanrossum
 
-List of repositories
+List of repositories can be fetched with the URL,
 https://api.github.com/users/gvanrossum/repos
 
-Replace gvanrossum with the username of the user that you want information about. 
+Replace the **gvanrossum** part of each URL with the username of the user that you want information about. 
 
 Some other usernames you can try are,
 
-* Linus Torvalds's (created the Linux operating system) GitHub username is torvalds
-* Moxie Marlinspike's (computer security researcher) GitHub username is moxie0
-* Marcus Persson (created Minecraft) GitHub username is xnotch
-
-  
+* Linus Torvalds's (created the Linux operating system) GitHub username is **torvalds**
+* Moxie Marlinspike's (computer security researcher) GitHub username is **moxie0**
+* Your own GitHub username
