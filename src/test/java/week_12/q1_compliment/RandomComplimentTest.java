@@ -40,7 +40,7 @@ public class RandomComplimentTest {
         // Ensure it's called with the correct API string
         try( MockedStatic<Unirest> mockUnirest = mockStatic(Unirest.class) ) {
 
-            String expectedURL = "https://random-compliment.herokuapp.com/random";
+            String expectedURL = "https://random-compliment.azurewebsites.net/random";
 
             mockUnirest.when( () -> Unirest.get(expectedURL)).thenReturn(null);
 

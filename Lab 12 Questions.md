@@ -30,10 +30,10 @@ Finish the program that displays a random compliment.
 
 API documentation: https://github.com/claraj/compliments_API
 
-The API URL you will use is https://random-compliment.herokuapp.com/random
+The API URL you will use is https://random-compliment.azurewebsites.net/random
 
 The API server "sleeps" when it hasn't been used for an hour, and will take a few seconds to wake up. 
-So, the first request your program makes can take 10-15 seconds to complete. This is normal, and if your program correctly displays the compliment, your code is working. 
+So, the first request your program makes can take 60 seconds to complete. This is normal, and if your program correctly displays the compliment, your code is working. 
 
 ### GitHub User Information API
 

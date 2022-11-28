@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="renumber">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Auto_Grader_12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Auto_Grader_12.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab 12 Questions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 12 Questions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/week_12/q1_compliment/RandomCompliment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_12/q1_compliment/RandomCompliment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/week_12/q1_compliment/RandomComplimentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_12/q1_compliment/RandomComplimentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +45,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1SXoEYmeUuAMJg0JhD0a9SAtx05" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -152,33 +151,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="289" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="options.lastSelected" value="configurable.group.tools" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="week_9" />
@@ -218,6 +195,45 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="grailsApplicationRoot" value="" />
+      <setting name="launchBrowser" value="false" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -287,26 +303,30 @@
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java />
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
       <option name="TESTING_TYPE" value="0" />
@@ -316,21 +336,25 @@
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="EXTRA_OPTIONS" value="" />
       <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
+      <option name="RETENTION_ENABLED" value="No" />
+      <option name="RETENTION_MAX_SNAPSHOTS" value="2" />
+      <option name="RETENTION_COMPRESS_SNAPSHOTS" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="DEBUGGER_TYPE" value="Java" />
       <Java />
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="RandomCompliment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -352,45 +376,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="grailsApplicationRoot" value="" />
-      <setting name="launchBrowser" value="false" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method v="2" />
     </configuration>
     <configuration name="GitHubUserInformationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java_Auto_Grader_12" />
@@ -468,47 +453,12 @@
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Java_Auto_Grader_5_6_7" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -603,21 +553,10 @@
       <workItem from="1637012441574" duration="146000" />
       <workItem from="1638225045019" duration="2919000" />
       <workItem from="1639415020661" duration="253000" />
-      <workItem from="1652112091691" duration="396000" />
-    </task>
-    <task id="LOCAL-00009" summary="Q6">
-      <created>1501798808610</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1501798808610</updated>
-    </task>
-    <task id="LOCAL-00010" summary="setting up wk 7&#10;">
-      <created>1501874707113</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1501874707113</updated>
+      <workItem from="1652112091691" duration="802000" />
+      <workItem from="1669677792678" duration="97000" />
+      <workItem from="1669677918056" duration="77000" />
+      <workItem from="1669678086556" duration="304000" />
     </task>
     <task id="LOCAL-00011" summary="setting up wk 7&#10;">
       <created>1501875329154</created>
@@ -948,7 +887,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639415270095</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Note on waking up server, remove one example github user">
+      <created>1652112702365</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1652112702366</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Increase test timeouts">
+      <created>1652112923883</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1652112923883</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -988,7 +941,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1004,8 +956,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Rubiks cube GUI program." />
-    <MESSAGE value="Rubiks cube GUI program and tests" />
     <MESSAGE value="Fix DB name" />
     <MESSAGE value="Column names" />
     <MESSAGE value="Row count off-by-one" />
@@ -1029,69 +979,9 @@
     <MESSAGE value="Tidy, highlight that fields in GitHub program should be public" />
     <MESSAGE value="remove extra version in pom" />
     <MESSAGE value="int, not integer or Integer or anything else." />
-    <option name="LAST_COMMIT_MESSAGE" value="int, not integer or Integer or anything else." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="138" y="123" width="1198" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1636755056720">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="138" y="123" width="1198" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1636755056720" />
-    <state x="529" y="159" key="#com.intellij.ide.util.MemberChooser" timestamp="1636754380116">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="529" y="159" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1636754380116" />
-    <state width="1257" height="201" key="GridCell.Tab.0.bottom" timestamp="1639415272969">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1257" height="201" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1639415272969" />
-    <state width="1257" height="201" key="GridCell.Tab.0.center" timestamp="1639415272969">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1257" height="201" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1639415272969" />
-    <state width="1257" height="201" key="GridCell.Tab.0.left" timestamp="1639415272968">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1257" height="201" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1639415272968" />
-    <state width="1257" height="201" key="GridCell.Tab.0.right" timestamp="1639415272969">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1257" height="201" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1639415272969" />
-    <state width="1344" height="281" key="GridCell.Tab.1.bottom" timestamp="1638231578020">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
-    <state width="1344" height="281" key="GridCell.Tab.1.center" timestamp="1638231578020">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
-    <state width="1344" height="281" key="GridCell.Tab.1.left" timestamp="1638231578020">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
-    <state width="1344" height="281" key="GridCell.Tab.1.right" timestamp="1638231578020">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="1344" height="281" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1638231578020" />
-    <state x="235" y="37" key="SettingsEditor" timestamp="1639415055110">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="235" y="37" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1639415055110" />
-    <state x="337" y="188" key="Vcs.Push.Dialog.v2" timestamp="1639415271460">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="337" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1639415271460" />
-    <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1636741708776">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="554" y="186" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877@0.23.1440.877" timestamp="1636741708776" />
-    <state x="31" y="144" width="944" height="640" key="find.popup" timestamp="1636743134816">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="31" y="144" width="944" height="640" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1636743134816" />
-    <state x="427" y="181" key="git4idea.branch.GitSmartOperationDialog" timestamp="1636751144496">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="427" y="181" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.877@0.23.1440.877" timestamp="1636751144496" />
+    <MESSAGE value="Note on waking up server, remove one example github user" />
+    <MESSAGE value="Increase test timeouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increase test timeouts" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

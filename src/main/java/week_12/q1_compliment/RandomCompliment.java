@@ -16,7 +16,7 @@ public class RandomCompliment {
         /*
         * TODO use Unirest to make a request to the Random Compliment API, using the URL
         *
-        * https://random-compliment.herokuapp.com/random
+        * https://random-compliment.azurewebsites.net/random
         *
         * Tip: Paste the URL into your browser address bar to visualize the structure
         * of the response.  You'll see a different compliment every time. An example
@@ -33,7 +33,8 @@ public class RandomCompliment {
         *    If you create a new class file, make sure you add it to your Git repository
         *    so it is committed and uploaded to your lab repository.
         *
-        *  The Compliment class should have a public field, or public get and set methods to save the text property.
+        *  The Compliment class should have a public field for the text property,
+        *  OR public get and set methods for the text property.
         *
         * Remember that field(s) in classes used to store API responses,
         * need to to match the names of properties in the JSON response.
@@ -43,7 +44,7 @@ public class RandomCompliment {
         * TODO Extract and return the text - the compliment text.
         *
         * If you see errors when making the API call, please try the API URL
-        * https://random-compliment.herokuapp.com/random
+        * https://random-compliment.azurewebsites.net/random
         * in your browser. If you see an error message, please let me know ASAP. Thank you!
         * If the API seems to be working - you see a random compliment - then check your code
         * for errors, and please email me if you need any help troubleshooting.
