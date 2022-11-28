@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 public class RandomComplimentTest {
 
-    private final int TIMEOUT = 60000;  // 60 seconds, big timeout since API will be slow to wake up if not used for an hour.
+    private final int TIMEOUT = 180000;  // 180 seconds = 3 minutes, big timeout since API will be slow to wake up if not used for an hour.
 
     private static ObjectMapper originalMapper;
 
