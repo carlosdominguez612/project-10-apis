@@ -1,8 +1,8 @@
-package week_12.q2_github;
+package week_11.q2_github;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import week_12.test_utils.PrintUtils;
+import week_11.test_utils.PrintUtils;
 
 import java.lang.reflect.Field;
 

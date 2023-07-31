@@ -1,15 +1,15 @@
-{ "week" : 12,
+{ "week" : 11,
   "questions" : [
     {
       "question" : 1,
       "java_file": "RandomCompliment",
-      "test_files": ["week_12.q1_compliment.RandomComplimentTest"],
+      "test_files": ["week_11.q1_compliment.RandomComplimentTest"],
       "points": 8
     },
     {
       "question" : 2,
       "java_file": "GitHubUserInformation",
-      "test_files": ["week_12.q2_github.GitHubUserInformationTest"],
+      "test_files": ["week_11.q2_github.GitHubUserInformationTest"],
       "points": 12
     }
   ]
