@@ -1,4 +1,4 @@
-## Lab 11: Java APIs
+## Lab 10: Java APIs
 
 **Dependencies**  
 The necessary dependencies have already been added to this project for you, so you will not need to modify pom.xml.

@@ -1,4 +1,4 @@
-package week_11.q1_compliment;
+package week_10.q1_compliment;
 
 import kong.unirest.ObjectMapper;
 import kong.unirest.Unirest;
@@ -63,7 +63,7 @@ public class RandomComplimentTest {
     private Class findComplimentResponseClass() {
 
         try {
-            Class complimentClass = Class.forName("week_11.q1_compliment.Compliment");
+            Class complimentClass = Class.forName("week_10.q1_compliment.Compliment");
             System.out.println("Found Compliment class, standalone class as expected.");
             return complimentClass;
         } catch(Exception e) {
@@ -71,7 +71,7 @@ public class RandomComplimentTest {
             // not found, check for nested class but tell student to move to standalone
             try {
                 // nested classes not allowed. Can't create as easily with reflection.
-                Class complimentResponse = Class.forName("week_11.q1_compliment.RandomCompliment$Compliment");
+                Class complimentResponse = Class.forName("week_10.q1_compliment.RandomCompliment$Compliment");
                 System.err.println("Found Compliment class, defined as a nested class. " +
                         "\nMove the class definition outside of the RandomCompliment class.");
             } catch(Exception ex) {
