@@ -5,10 +5,12 @@ public class GitHubUser {
 
     /*
         TODO finish this class.
-            This should contain fields for a
+            This should contain public fields for a
             GitHub user's login, their name, and their location.
 
-        TODO Use public fields. Don't use private fields with getters and setters.
+        TODO Use public fields.
+         Don't use private fields with getters and setters.
+         Don't create a constructor.
 
         For example, in this response,
         https://api.github.com/users/gvanrossum

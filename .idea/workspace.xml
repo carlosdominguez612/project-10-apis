@@ -42,9 +42,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="1SXoEYmeUuAMJg0JhD0a9SAtx05" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -157,6 +157,9 @@
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/we4954cp/Development/java/AutograderLabs/JAG_10_2024",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -569,6 +572,7 @@
       <workItem from="1670012687331" duration="138000" />
       <workItem from="1670279150735" duration="79000" />
       <workItem from="1710799637363" duration="142000" />
+      <workItem from="1713913806590" duration="28000" />
     </task>
     <task id="LOCAL-00014" summary="Insect class structure checks">
       <created>1501951108302</created>
@@ -913,7 +917,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670012818167</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView">
