@@ -1,7 +1,8 @@
 ## Lab 10: Java APIs
 
 **Dependencies**  
-The necessary dependencies have already been added to this project for you, so you will not need to modify pom.xml.
+Use Unirest to make API requests, as shown in the lecture videos.
+The necessary dependencies (Unirest and GSON) have already been added to this project for you, so you will not need to modify pom.xml.
 
 **Code needs to meet the requirements given in the instructions**  
 The tests for this lab can't check everything about your code since it uses API calls and external APIs. 
@@ -26,7 +27,7 @@ Do make sure you have an internet connection as you work on this lab.
 
 ### Random Compliment API
 
-Finish the program that displays a random compliment.
+Finish the program that displays a random compliment. 
 
 API documentation: https://github.com/claraj/compliments_API
 
@@ -47,6 +48,7 @@ Your program will connect to the GitHub API and request information about a GitH
 * Their name
 * Their login name
 * Their location
+
 * For each one of their repositories, 
   * The name, 
   * language, 

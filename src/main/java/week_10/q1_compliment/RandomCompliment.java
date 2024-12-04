@@ -14,7 +14,7 @@ public class RandomCompliment {
     public static String getRandomCompliment() {
 
         /*
-        * TODO use Unirest to make a request to the Random Compliment API, using the URL
+        * TODO make a request to the Random Compliment API, using the URL
         *
         * https://random-compliment.azurewebsites.net/random
         *
