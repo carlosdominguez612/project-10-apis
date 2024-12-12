@@ -1,6 +1,5 @@
 package week_10.q1_compliment;
 
-
 import kong.unirest.core.Unirest;
 
 public class RandomCompliment {
@@ -14,7 +13,6 @@ public class RandomCompliment {
         System.out.println(compliment);
     }
 
-
     public static String getRandomCompliment() {
 
         // URL String
@@ -23,13 +21,14 @@ public class RandomCompliment {
         // Make a request to the Random Compliment API, using the URL String
         // request to the API and store the response in a Compliment object.
         Compliment compliment = Unirest.get(complimentURL)
+                // return the response as a Compliment object type
                 .asObject(Compliment.class)
+                // get the objects within the response, BUT ONLY those objects specified in Compliment.class.
                 .getBody();
 
         // Extract and return the text - the compliment text.
         return compliment.toString();
 
     }
-
 
 }

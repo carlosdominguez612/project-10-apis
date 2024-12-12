@@ -37,7 +37,9 @@ public class GitHubUserInformation {
         // Convert the response to a GitHubUser object.
         // This object will store data from the API response.
         GitHubUser user = Unirest.get(requestURL)
+                // return the response as a GitHubUser object type
                 .asObject(GitHubUser.class)
+                // get the objects within the response, BUT ONLY those objects specified in GitHubUser.class
                 .getBody();
         // Return the GitHubUser object.
         return user;
@@ -76,7 +78,9 @@ public class GitHubUserInformation {
         // Convert the response to an array of GitHubRepository objects.
         // These object will store data about each repository from the API response.
         GitHubRepository[] repositories = Unirest.get(requestURLwLogin)
+                // return the response as a GitHubUserRepository[] object type
                 .asObject(GitHubRepository[].class)
+                // get the objects within the response, BUT ONLY those objects specified in GitHubRepository[].class
                 .getBody();
 
         // Return the GitHubRepository array.
