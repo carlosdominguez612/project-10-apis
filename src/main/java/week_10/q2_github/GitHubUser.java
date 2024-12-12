@@ -4,13 +4,8 @@ package week_10.q2_github;
 public class GitHubUser {
 
     /*
-        TODO finish this class.
-            This should contain public fields for a
-            GitHub user's login, their name, and their location.
-
-        TODO Use public fields.
-         Don't use private fields with getters and setters.
-         Don't create a constructor.
+        This should contain public fields for a
+        GitHub user's login, their name, and their location.
 
         For example, in this response,
         https://api.github.com/users/gvanrossum
@@ -19,6 +14,16 @@ public class GitHubUser {
         The location is "San Francisco Bay Area"
     */
 
+    public String login;
+    public String name;
+    public String location;
+
+    @Override
+    public String toString() {
+        return "Username: " + login + ' ' +
+                ", Full Name: " + name + ' ' +
+                ", Location: " + location;
+    }
 }
 
 

@@ -16,6 +16,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Lecture_Code" />
         <module name="Java_Auto_Grader_12" />
         <module name="Java_Auto_Grader_7" />
         <module name="Java_Auto_Grader_8" />
