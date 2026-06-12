@@ -6,6 +6,7 @@ public class RandomCompliment {
 
     // Retrieve objects from an API
     // Print response from API
+    // Testing API
 
     public static void main(String[] args) {
         // You don't need to modify the main method.
